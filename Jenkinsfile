@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'yarn build'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'yarn test'
             }
         }
     }
